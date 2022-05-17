@@ -16,7 +16,7 @@ RUN rm /usr/local/bin/install-php-extensions \
     && apk del wget \
     && mkdir /usr/appl
 
-COPY ./app/productup-challenge-xml-data-importer /usr/appl
+COPY ./productup-challenge-xml-data-importer /usr/appl
 WORKDIR  /usr/appl
 RUN composer install && composer dumpautoload -o
 

@@ -1,7 +1,9 @@
 #!/bin/sh
 if [ "$(ls -A $(pwd)/app/productup-challenge-xml-data-importer)" ]
  then
+    echo 'dir is present...'
+ else
     git clone git@github.com:arunnabraham/productup-challenge-xml-data-importer.git
-    git checkout developing
 fi
-podman build -t localhost/php-cli-alpine:latest .
+podman build --no-cache -t localhost/php-cli-alpine:latest .
+rm -rf ./productup-challenge-xml-data-importer
