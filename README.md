@@ -14,7 +14,17 @@ chmod +x ./run.sh
 
 # Run Application
 
-<code>./run.sh export json -t remote -i http://a.cdn.searchspring.net/help/feeds/searchspring.xml</code>
+
+<code> curl -s http://a.cdn.searchspring.net/help/feeds/searchspring.xml | /run.sh export csv </code>
+
+
+<code> curl -s http://a.cdn.searchspring.net/help/feeds/searchspring.xml | ./run.sh export json </code>
+
+
+<code> cat path/filename.xml | ./run.sh export csv </code>
+ 
+ 
+ <code> cat path/filename.xml | ./run.sh export json </code>
 
 
 ** Currently the code implementation supports only remote file in the container method
