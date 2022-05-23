@@ -18,8 +18,8 @@ RUN rm /usr/local/bin/install-php-extensions \
 
 COPY ./productup-challenge-xml-data-importer /usr/appl
 WORKDIR  /usr/appl
-RUN composer install && composer dumpautoload -o
+RUN composer --no-dev install && composer dumpautoload -o
 
 RUN chmod +x /usr/appl/run
 
-CMD ["php" "/usr/appl/run"]
+# CMD ["php" "/usr/appl/run"]
