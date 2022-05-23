@@ -26,8 +26,3 @@ chmod +x ./run.sh
  
  <code> cat path/filename.xml | ./run.sh export json </code>
 
-
-** Currently the code implementation supports only remote file in the container method
-** Baremetal Option works for Both cases
-
-
